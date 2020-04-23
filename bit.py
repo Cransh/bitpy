@@ -173,3 +173,46 @@ class Bit():
         """
         return int(self.__bit_status)
     
+    def toggle(self):
+        """
+        Toggle the value of the Bit
+
+        Returns
+        -------
+        Bit
+            Return the Bit if needed to be assined again
+
+        """
+        self.__old_bit_status=self.__bit_status
+        self.__bit_status= not self.__bit_status
+        return self
+    
+    def set_bit(self):
+        """
+        Set the Bit (Make it True)
+
+        Returns
+        -------
+        Bit
+            Return the Bit if needed to be assined again
+
+        """
+        self.__old_bit_status=self.__bit_status
+        self.__bit_status= True
+        return self
+        
+    def reset_bit(self):
+        """
+        Reset the Bit (Make it False)
+
+        Returns
+        -------
+        Bit
+            Return the Bit if needed to be assined again
+
+        """
+        self.__old_bit_status=self.__bit_status
+        self.__bit_status= False
+        return self
+        
+    
