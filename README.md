@@ -5,28 +5,26 @@ add Falling edge and Rising edge Detection function for Bool-like Type.
 
 #to use the module 
 
-from bit import Bit
+*********************************************************************************************
 
-x=Bit() #Create new bit with false value
+  from bit import Bit
 
-y=Bit(1) #Create new bit with True value
+  x=Bit() #Create new bit with false value
 
-x.value() #return int value of the bit
+  y=Bit(1) #Create new bit with True value
 
-y(0)  #update the value of the bit
+  x.value() #return int value of the bit
 
-z=x() #create new bit with the state of x
+  y(0)  #update the value of the bit
 
-x(1) #update the value of the bit
+  z=x() #create new bit with the state of x
 
-x.rising_edge()#return True
+  x(1) #update the value of the bit
 
-y.falling_edge()#return True
+  x.rising_edge()#return True
 
-x.rising_edge()#return False because the bit need to be in rising edge condion again 
+  y.falling_edge()#return True
 
+  x.rising_edge()#return False because the bit need to get a rising edge condion again 
 
-
-
-
-
+*********************************************************************************************
