@@ -82,7 +82,7 @@ class Bit():
             return self
         else:
             if isbool(status):
-                self.__old_bit_status=self.__bit_status
+                self.__old_bit_status=bool(self.__bit_status)
                 self.__bit_status=bool(status)
                 return self
             else:
@@ -105,7 +105,7 @@ class Bit():
 
         """
         if isbool(status):
-            self.__old_bit_status=self.__bit_status
+            self.__old_bit_status=bool(self.__bit_status)
             self.__bit_status=bool(status)
             return self.__bit_status
         else:
@@ -136,7 +136,7 @@ class Bit():
             False if the rising edge not detected.
 
         """
-        if self.__old_bit_status==False & self.__bit_status==True:
+        if self.__old_bit_status==False and self.__bit_status==True:
             self.__old_bit_status=self.__bit_status
             return True
         else:
@@ -154,7 +154,7 @@ class Bit():
             False if the falling edge not detected.
 
         """
-        if self.__old_bit_status==True & self.__bit_status==False:
+        if self.__old_bit_status==True and self.__bit_status==False:
             self.__old_bit_status=self.__bit_status
             return True
         else:
@@ -183,7 +183,7 @@ class Bit():
             Return the Bit if needed to be assined again
 
         """
-        self.__old_bit_status=self.__bit_status
+        self.__old_bit_status=bool(self.__bit_status)
         self.__bit_status= not self.__bit_status
         return self
     
@@ -197,7 +197,7 @@ class Bit():
             Return the Bit if needed to be assined again
 
         """
-        self.__old_bit_status=self.__bit_status
+        self.__old_bit_status=bool(self.__bit_status)
         self.__bit_status= True
         return self
         
@@ -211,8 +211,7 @@ class Bit():
             Return the Bit if needed to be assined again
 
         """
-        self.__old_bit_status=self.__bit_status
+        self.__old_bit_status=bool(self.__bit_status)
         self.__bit_status= False
         return self
         
-    
